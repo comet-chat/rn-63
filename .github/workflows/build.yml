@@ -41,11 +41,11 @@ jobs:
           distribution: 'zulu'
   
       - name: Make Gradlew Executable
-        run: cd $PROJECT_NAME && cd android && chmod +x ./gradlew
+        run: cd android && chmod +x ./gradlew
         
       - name: Generate App APK
         run: |
-          cd $PROJECT_NAME && cd android && ./gradlew assembleRelease --no-daemon
+          cd android && ./gradlew assembleRelease --no-daemon
           
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.0.0
