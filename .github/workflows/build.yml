@@ -45,6 +45,7 @@ jobs:
         
       - name: Generate App APK
         run: |
+          npm install
           cd android && ./gradlew assembleRelease --no-daemon
           
       - name: Upload a Build Artifact
